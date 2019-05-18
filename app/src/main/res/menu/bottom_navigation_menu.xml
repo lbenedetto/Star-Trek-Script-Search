@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/searchFragment"
+            android:title="@string/search"
+            android:icon="@drawable/ic_search_white_24dp"/>
+
+    <item
+            android:id="@+id/browseFragment"
+            android:title="@string/browse"
+            android:icon="@drawable/ic_subject_white_24dp"/>
+
+    <item
+            android:id="@+id/generateFragment"
+            android:title="@string/generate"
+            android:icon="@drawable/ic_brush_white_24dp"/>
+</menu>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Star Trek Script Search</string>
+    <string name="search_explanation">You can search now to look for this word in all episodes in all series spoken by all characters, or you can add some criteria below to narrow down your search.</string>
+    <string name="search_text_label">What word or phrase are you looking for?</string>
+    <string name="search_text_hint">Word or Phrase</string>
+    <string name="search_character_speaker_label">Which character spoke this word or phrase? (Any of them) (optional)</string>
+    <string name="search_character_speaker_hint">Spock</string>
+    <string name="search_character_listener_label">Who did they say it to? (Who else was present in the scene?) (optional)</string>
+    <string name="search_character_listener_hint">McCoy</string>
+    <string name="search_episode_label">In which episode or movie was this word or phrase spoken? (optional)</string>
+    <string name="search_episode_hint">In The Pale Moonlight</string>
+    <string name="search_location_label">In which location was this word/phrase spoken? (optional)</string>
+    <string name="search_location_hint">Ready Room</string>
+
+    <string name="tos_and_movies">The Original Series (+movies)</string>
+    <string name="tas">The Animated Series</string>
+    <string name="tng_and_movies">The Next Generation (+movies)</string>
+    <string name="ds9">Deep Space Nine</string>
+    <string name="st_voy">Star Trek: Voyager</string>
+    <string name="st_ent">Star Trek: Enterprise</string>
+    <string name="series_filter_label">In which series was this word or phrase spoken? (optional)</string>
+    <string name="search">Search</string>
+    <string name="browse">Browse</string>
+    <string name="generate">Generate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

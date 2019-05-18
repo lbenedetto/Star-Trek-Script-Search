@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_navigation"
+            app:startDestination="@id/searchFragment">
+
+    <fragment
+            android:id="@+id/searchFragment"
+            android:label="SearchFragment"
+            android:name="com.lbenedetto.stss.fragments.search.SearchFragment">
+        <action
+                android:id="@+id/action_searchFragment_to_browseFragment"
+                app:destination="@id/browseFragment"/>
+        <action
+                android:id="@+id/action_searchFragment_to_generateFragment"
+                app:destination="@id/generateFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/browseFragment"
+            android:label="BrowseFragment"
+            android:name="com.lbenedetto.stss.fragments.browse.BrowseFragment">
+        <action
+                android:id="@+id/action_browseFragment_to_generateFragment"
+                app:destination="@id/generateFragment"/>
+        <action
+                android:id="@+id/action_browseFragment_to_searchFragment"
+                app:destination="@id/searchFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/generateFragment"
+            android:label="GenerateFragment"
+            android:name="com.lbenedetto.stss.fragments.generate.GenerateFragment">
+        <action
+                android:id="@+id/action_generateFragment_to_browseFragment"
+                app:destination="@id/browseFragment"/>
+        <action
+                android:id="@+id/action_generateFragment_to_searchFragment"
+                app:destination="@id/searchFragment"/>
+    </fragment>
+</navigation>

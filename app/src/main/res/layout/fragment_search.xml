@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".fragments.search.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+        <com.lbenedetto.stss.customview.SearchInputView
+                android:id="@+id/sivWordOrPhrase"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:hint="@string/search_text_hint"
+                app:label="@string/search_text_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:separator="false"/>
+
+        <TextView
+                android:id="@+id/tvSearchExplanation"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/search_explanation"
+                app:layout_constraintEnd_toStartOf="@+id/btnSearchPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sivWordOrPhrase"/>
+
+        <Button
+                android:id="@+id/btnSearchPrimary"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@android:string/search_go"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSearchExplanation"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+                android:id="@+id/separator1"
+                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSearchExplanation"/>
+
+
+        <com.lbenedetto.stss.customview.SearchInputView
+                android:id="@+id/sivCharacterSpeaker"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:hint="@string/search_character_speaker_hint"
+                app:label="@string/search_character_speaker_label"
+                app:layout_constraintTop_toBottomOf="@+id/separator1"/>
+
+        <com.lbenedetto.stss.customview.SearchInputView
+                android:id="@+id/sivCharacterListener"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:hint="@string/search_character_listener_hint"
+                app:label="@string/search_character_listener_label"
+                app:layout_constraintTop_toBottomOf="@+id/sivCharacterSpeaker"/>
+
+        <TextView
+                android:id="@+id/tvSeriesFilterLabel"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/series_filter_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sivCharacterListener"/>
+
+        <LinearLayout
+                android:id="@+id/llCheckboxes"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSeriesFilterLabel">
+
+            <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <CheckBox
+                        android:id="@+id/cbTOS"
+                        android:layout_height="wrap_content"
+                        android:layout_width="190dp"
+                        android:text="@string/tos_and_movies"/>
+
+                <CheckBox
+                        android:id="@+id/cbTAS"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/tas"/>
+
+                <CheckBox
+                        android:id="@+id/cbTNG"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/tng_and_movies"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <CheckBox
+                        android:id="@+id/cbDS9"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/ds9"/>
+
+                <CheckBox
+                        android:id="@+id/cbVOY"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/st_voy"/>
+
+                <CheckBox
+                        android:id="@+id/cbENT"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/st_ent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:id="@+id/separator2"
+                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCheckboxes"/>
+
+
+        <com.lbenedetto.stss.customview.SearchInputView
+                android:id="@+id/sivEpisode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:hint="@string/search_episode_hint"
+                app:label="@string/search_episode_label"
+                app:layout_constraintTop_toBottomOf="@+id/separator2"/>
+
+        <com.lbenedetto.stss.customview.SearchInputView
+                android:id="@+id/sivLocation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:hint="@string/search_location_hint"
+                app:label="@string/search_location_label"
+                app:layout_constraintTop_toBottomOf="@+id/sivEpisode"/>
+
+        <Button
+                android:id="@+id/btnSearchSecondary"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@android:string/search_go"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sivLocation"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
